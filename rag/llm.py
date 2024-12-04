@@ -15,7 +15,7 @@ class LLM:
           try:
             llm = ChatOpenAI(model = "gpt-4o",
                               max_tokens=4096,
-                              temperature=1)
+                              temperature=0.2)
           except Exception as e:
             raise Exception(f"Cannot load chatgpt. Error:{e}")
         

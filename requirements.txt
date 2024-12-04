@@ -9,3 +9,5 @@ langchain-google-genai
 langchain-huggingface
 langchain-mistralai
 python-dotenv
+qdrant-client
+crewai

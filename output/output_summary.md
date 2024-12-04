@@ -1,332 +1,68 @@
 # Summary
 
-### Summary of Entity Resolution for Census Data
+### Summary of Entity Resolution
 
-#### Entity Group ID: 1
-**Match Type:** Direct Match
-**Entities:**
-- **simulant_id:** 0_19970
-  - **first_name:** Trevor
-  - **middle_initial:** A
-  - **last_name:** Towne
-  - **street_number:** 1702
-  - **street_name:** meisner rd
-- **simulant_id:** 0_19974
-  - **first_name:** Tabitha
-  - **middle_initial:** A
-  - **last_name:** Bermudez-Urbina
-  - **street_number:** 1702
-  - **street_name:** meisner rd
-- **simulant_id:** 0_19977
-  - **first_name:** Jerome
-  - **middle_initial:** D
-  - **last_name:** Conley
-  - **street_number:** 1702
-  - **street_name:** meisner rd
-- **simulant_id:** 0_19986
-  - **first_name:** Brendan
-  - **middle_initial:** M
-  - **last_name:** Mcnamara
-  - **street_number:** 1702
-  - **street_name:** meisner rd
+#### Direct Matching
 
-**Explanation:** All entities share the same street number and street name, indicating they likely reside in the same household.
+**Objective:** Link records that directly match by name.
 
-#### Entity Group ID: 2
-**Match Type:** Direct Match
-**Entities:**
-- **simulant_id:** 0_7772
-  - **first_name:** Nathaniel
-  - **middle_initial:** D
-  - **last_name:** Blair
-  - **street_number:** 1331
-  - **street_name:** peachtree blvd
-- **simulant_id:** 0_7773
-  - **first_name:** Deandre
-  - **middle_initial:** B
-  - **last_name:** Blair
-  - **street_number:** 1331
-  - **street_name:** peachtree blvd
-- **simulant_id:** 0_7774
-  - **first_name:** Kevin
-  - **middle_initial:** T
-  - **last_name:** Blair
-  - **street_number:** 1331
-  - **street_name:** peachtree blvd
+| Record ID | Full Name                  | Address                         | City                | State | ZIP    | SSN          | Other Info | Explanation                                                                 |
+|-----------|----------------------------|---------------------------------|---------------------|-------|--------|--------------|------------|-----------------------------------------------------------------------------|
+| A910195   | m g habte                  | 5800 Owensmouth Ave Apt 18      | WOODLAND HILLS      | CA    | 91367  | NaN          | NaN        | Same name with minor spelling differences and identical address.            |
+| A924822   | mathew g habte             | 5800 owensmoth avn apt 18      | woodland hilhls     | calif.| 91367  | NaN          | NaN        |                                                                             |
+| A976579   | northington h clarke       | 10128 capistrano ave            | SOUTH GATE          | CA    | 90280  | 26189770     | NaN        | Same name with minor spelling differences and identical SSN.               |
+| A986974   | N H CLARKE                 | 21490 PIONEER RD                | Los Banos           | CA    | 93635  | 026-18-9770  | 19350613   |                                                                             |
+| A959515   | Northington H Clare        | 21490 pioneer rd                | los banos           | cali  | 93635  | 26189770     | NaN        |                                                                             |
+| A997180   | NORTHINGTON H CLARKE       | 3917 Del Rey Drv                | SAN BERNARDINO      | CA    | 92404  | 206-18-9770  | NaN        |                                                                             |
+| B902944   | CASEY A GACKENBACH         | 2759 ascot dr                   | Cardiff By The Sea  | CA    | 92009  | (760)214.3372| NaN        | Same name with minor spelling differences and identical phone number.    |
+| B930743   | CASEY A Gackenbach         | 45236 APTDO                     | SAN DIEGO           | C     | 92145  | 619-380-4576 | NaN        |                                                                             |
+| B921886   | Shelley S RICHARDS         | 3307 SPINDLETOP CTQ             | manvel              | texags| 77578  | 281.623-0402 | NaN        | Same name with minor spelling differences and identical address.          |
+| B943484   | shelley S richards          | 1818 BOX                        | LEANDER             | TEXAS | 7F8646 | (512)452.2110| NaN        |                                                                             |
+| B990320   | Shelley S richards          | 3307 Spindletop Ct              | manvel              | tx    | 77578  | (281)623.0402| NaN        |                                                                             |
+| B997328   | shelley S rihcards         | 3307 Spindletop Court           | MANVEL              | TX    | 77578  | 281.623.0402 | NaN        |                                                                             |
+| B988617   | SHELLEY S Richards          | 8963 westbrok ct                | rancho cucamonga    | calif.| 91730  | 909-146.6573 | NaN        |                                                                             |
+| A970015   | Shelley S Richards          | 3307 SPINDLTOP CT               | manvel              | texas | 77578  | 25996464     | 1950       |                                                                             |
+| A981133   | SHELLEY S RICHARDS          | 3307 SPINDLETOP CT              | MANVEL              | TX    | 77578  | 29596446     | 18396      |                                                                             |
 
-**Explanation:** All entities share the same last name, street number, and street name, indicating they likely belong to the same household.
+#### Indirect Matching
 
-#### Entity Group ID: 3
-**Match Type:** Direct Match
-**Entities:**
-- **simulant_id:** 0_129
-  - **first_name:** Melody
-  - **middle_initial:** M
-  - **last_name:** Ward
-  - **street_number:** 3564
-  - **street_name:** s jacinto dr
+**Objective:** Perform indirect matching of records connected through an intermediary.
 
-**Explanation:** Single entity with unique attributes.
+| Record ID | Full Name                  | Address                         | City                | State | ZIP    | SSN          | Other Info | Explanation                                                                 |
+|-----------|----------------------------|---------------------------------|---------------------|-------|--------|--------------|------------|-----------------------------------------------------------------------------|
+| A920309   | MATTIE M RAMIREZ           | 508 HOLLYWOOD ST                | TULELAKE            | CA    | 96134  | 23665462     | NaN        | Same SSN with minor spelling differences and identical address.           |
+| A922114   | martha m otrres            | 4410 BROWNING DRV               | oxnard              | ca    | 93033  | 023-66-5462  | 19170401   |                                                                             |
 
-#### Entity Group ID: 4
-**Match Type:** Direct Match
-**Entities:**
-- **simulant_id:** 0_1494
-  - **first_name:** Derek
-  - **middle_initial:** J
-  - **last_name:** Shields
-  - **street_number:** 1211
-  - **street_name:** s bay mdw dr
-- **simulant_id:** 0_1495
-  - **first_name:** Hunter
-  - **middle_initial:** T
-  - **last_name:** Shields
-  - **street_number:** 1211
-  - **street_name:** s bay mdw dr
+#### Identify Households
 
-**Explanation:** Both entities share the same last name, street number, and street name, indicating they likely belong to the same household.
+**Objective:** Find records that form a household.
 
-#### Entity Group ID: 5
-**Match Type:** Direct Match
-**Entities:**
-- **simulant_id:** 0_10823
-  - **first_name:** Laurence
-  - **middle_initial:** A
-  - **last_name:** Kohlmeyer
-  - **street_number:** 26
-  - **street_name:** healey st nw
+| Record ID | Full Name                  | Address                         | City                | State | ZIP    | SSN          | Other Info | Explanation                                                                 |
+|-----------|----------------------------|---------------------------------|---------------------|-------|--------|--------------|------------|-----------------------------------------------------------------------------|
+| B921886   | Shelley S RICHARDS         | 3307 SPINDLETOP CTQ             | manvel              | texags| 77578  | 281.623-0402 | NaN        | Different names but identical address indicating a household.              |
+| B990320   | Shelley S richards          | 3307 Spindletop Ct              | manvel              | tx    | 77578  | (281)623.0402| NaN        |                                                                             |
+| B997328   | shelley S rihcards         | 3307 Spindletop Court           | MANVEL              | TX    | 77578  | 281.623.0402 | NaN        |                                                                             |
+| A970015   | Shelley S Richards          | 3307 SPINDLTOP CT               | manvel              | texas | 77578  | 25996464     | 1950       |                                                                             |
+| A981133   | SHELLEY S RICHARDS          | 3307 SPINDLETOP CT              | MANVEL              | TX    | 77578  | 29596446     | 18396      |                                                                             |
 
-**Explanation:** Single entity with unique attributes.
+#### Identify Household Moves
 
-#### Entity Group ID: 6
-**Match Type:** Direct Match
-**Entities:**
-- **simulant_id:** 0_2
-  - **first_name:** Melanie
-  - **middle_initial:** L
-  - **last_name:** Herrod
-  - **street_number:** 10233
-  - **street_name:** north burgher avenue
-- **simulant_id:** 0_3
-  - **first_name:** Jordan
-  - **middle_initial:** C
-  - **last_name:** Herrod
-  - **street_number:** 10233
-  - **street_name:** north burgher avenue
+**Objective:** Find instances where a household has moved to a new address.
 
-**Explanation:** Both entities share the same last name, street number, and street name, indicating they likely belong to the same household.
+| Record ID | Full Name                  | Address                         | City                | State | ZIP    | SSN          | Other Info | Explanation                                                                 |
+|-----------|----------------------------|---------------------------------|---------------------|-------|--------|--------------|------------|-----------------------------------------------------------------------------|
+| A976579   | northington h clarke       | 10128 capistrano ave            | SOUTH GATE          | CA    | 90280  | 26189770     | NaN        | Same name with minor spelling differences and different addresses.         |
+| A986974   | N H CLARKE                 | 21490 PIONEER RD                | Los Banos           | CA    | 93635  | 026-18-9770  | 19350613   |                                                                             |
+| A959515   | Northington H Clare        | 21490 pioneer rd                | los banos           | cali  | 93635  | 26189770     | NaN        |                                                                             |
+| A997180   | NORTHINGTON H CLARKE       | 3917 Del Rey Drv                | SAN BERNARDINO      | CA    | 92404  | 206-18-9770  | NaN        |                                                                             |
 
-#### Entity Group ID: 7
-**Match Type:** Direct Match
-**Entities:**
-- **simulant_id:** 0_923
-  - **first_name:** John
-  - **middle_initial:** E
-  - **last_name:** Mckeever
-  - **street_number:** 147-153
-  - **street_name:** browning ave
+### Explanation
 
-**Explanation:** Single entity with unique attributes.
+- **Direct Matching:** Records were matched based on similar names and identical addresses or SSNs.
+- **Indirect Matching:** Records were matched through intermediary attributes such as SSN and address.
+- **Identify Households:** Records were identified as forming a household based on different names but identical addresses.
+- **Identify Household Moves:** Records were identified as indicating a household move based on the same names but different addresses.
 
-#### Entity Group ID: 8
-**Match Type:** Direct Match
-**Entities:**
-- **simulant_id:** 0_180
-  - **first_name:** Matthew
-  - **middle_initial:** L
-  - **last_name:** Coppola
-  - **street_number:** 374
-  - **street_name:** s lipan st
-- **simulant_id:** 0_181
-  - **first_name:** Jonathan
-  - **middle_initial:** C
-  - **last_name:** Coppola
-  - **street_number:** 374
-  - **street_name:** s lipan st
-
-**Explanation:** Both entities share the same last name, street number, and street name, indicating they likely belong to the same household.
-
-#### Entity Group ID: 9
-**Match Type:** Direct Match
-**Entities:**
-- **simulant_id:** 0_2305
-  - **first_name:** Christine
-  - **middle_initial:** H
-  - **last_name:** Hittler
-  - **street_number:** 4
-  - **street_name:** e lake samish dr
-- **simulant_id:** 0_2306
-  - **first_name:** Thomas
-  - **middle_initial:** G
-  - **last_name:** Hittler
-  - **street_number:** 4
-  - **street_name:** e lake samish dr
-
-**Explanation:** Both entities share the same last name, street number, and street name, indicating they likely belong to the same household.
-
-#### Entity Group ID: 10
-**Match Type:** Direct Match
-**Entities:**
-- **simulant_id:** 0_19857
-  - **first_name:** Thomas
-  - **middle_initial:** D
-  - **last_name:** Purcell
-  - **street_number:** 8370
-  - **street_name:** chervil ct
-- **simulant_id:** 0_19862
-  - **first_name:** Matthew
-  - **middle_initial:** B
-  - **last_name:** Chalet
-  - **street_number:** 8370
-  - **street_name:** chervil ct
-- **simulant_id:** 0_19865
-  - **first_name:** NaN
-  - **middle_initial:** P
-  - **last_name:** Blakey
-  - **street_number:** 8370
-  - **street_name:** chervil ct
-- **simulant_id:** 0_19868
-  - **first_name:** Christine
-  - **middle_initial:** D
-  - **last_name:** Mckinley
-  - **street_number:** 8370
-  - **street_name:** chervil ct
-
-**Explanation:** All entities share the same street number and street name, indicating they likely reside in the same household.
-
-#### Entity Group ID: 11
-**Match Type:** Direct Match
-**Entities:**
-- **simulant_id:** 0_179
-  - **first_name:** Lucille
-  - **middle_initial:** B
-  - **last_name:** Coppola
-  - **street_number:** 374
-  - **street_name:** s lipan st
-- **simulant_id:** 0_180
-  - **first_name:** Matthew
-  - **middle_initial:** L
-  - **last_name:** Coppola
-  - **street_number:** 374
-  - **street_name:** s lipan st
-- **simulant_id:** 0_181
-  - **first_name:** Jonathan
-  - **middle_initial:** C
-  - **last_name:** Coppola
-  - **street_number:** 374
-  - **street_name:** s lipan st
-
-**Explanation:** All entities share the same last name, street number, and street name, indicating they likely belong to the same household.
-
-#### Entity Group ID: 12
-**Match Type:** Direct Match
-**Entities:**
-- **simulant_id:** 0_19851
-  - **first_name:** Gary
-  - **middle_initial:** R
-  - **last_name:** Tirado
-  - **street_number:** 8370
-  - **street_name:** chervil ct
-- **simulant_id:** 0_19854
-  - **first_name:** Charles
-  - **middle_initial:** N
-  - **last_name:** Garcia
-  - **street_number:** 8370
-  - **street_name:** chervil ct
-- **simulant_id:** 0_19865
-  - **first_name:** Eric
-  - **middle_initial:** P
-  - **last_name:** Blakey
-  - **street_number:** 8370
-  - **street_name:** chervil ct
-
-**Explanation:** All entities share the same street number and street name, indicating they likely reside in the same household.
-
-#### Entity Group ID: 13
-**Match Type:** Direct Match
-**Entities:**
-- **simulant_id:** 0_17988
-  - **first_name:** Curt
-  - **middle_initial:** L
-  - **last_name:** Grimaldi
-  - **street_number:** 3149
-  - **street_name:** NaN
-
-**Explanation:** Single entity with unique attributes.
-
-#### Entity Group ID: 14
-**Match Type:** Direct Match
-**Entities:**
-- **simulant_id:** 0_18327
-  - **first_name:** Bernardo
-  - **middle_initial:** NaN
-  - **last_name:** Calzada
-  - **street_number:** 1702
-  - **street_name:** meisner rd
-- **simulant_id:** 0_18331
-  - **first_name:** David
-  - **middle_initial:** H
-  - **last_name:** Watson
-  - **street_number:** 1702
-  - **street_name:** meisner rd
-
-**Explanation:** Both entities share the same street number and street name, indicating they likely reside in the same household.
-
-#### Entity Group ID: 15
-**Match Type:** Direct Match
-**Entities:**
-- **simulant_id:** 0_19851
-  - **first_name:** Gary
-  - **middle_initial:** R
-  - **last_name:** Tirado
-  - **street_number:** 8370
-  - **street_name:** chervil ct
-- **simulant_id:** 0_19853
-  - **first_name:** Bobby
-  - **middle_initial:** D
-  - **last_name:** Johnson
-  - **street_number:** 8370
-  - **street_name:** chervil ct
-- **simulant_id:** 0_19857
-  - **first_name:** Thomas
-  - **middle_initial:** D
-  - **last_name:** Purcell
-  - **street_number:** 8370
-  - **street_name:** chervil ct
-- **simulant_id:** 0_19862
-  - **first_name:** Matthew
-  - **middle_initial:** B
-  - **last_name:** Chalet
-  - **street_number:** 8370
-  - **street_name:** chervil ct
-
-**Explanation:** All entities share the same street number and street name, indicating they likely reside in the same household.
-
-#### Entity Group ID: 16
-**Match Type:** Direct Match
-**Entities:**
-- **simulant_id:** 0_19827
-  - **first_name:** Alan
-  - **middle_initial:** A
-  - **last_name:** Bernier
-  - **street_number:** 8370
-  - **street_name:** chervil ct
-- **simulant_id:** 0_19830
-  - **first_name:** Gail
-  - **middle_initial:** J
-  - **last_name:** Daniels
-  - **street_number:** 8370
-  - **street_name:** chervil ct
-- **simulant_id:** 0_19842
-  - **first_name:** Jerome
-  - **middle_initial:** H
-  - **last_name:** Cavuoto
-  - **street_number:** 8370
-  - **street_name:** chervil ct
-
-**Explanation:** All entities share the same street number and street name, indicating they likely reside in the same household.
-
-### Conclusion
-The entity resolution process identified several groups of entities that are likely to be the same individual or household based on direct matches of names and addresses. The explanations provided for each group clarify the basis for the matches, ensuring that the results are clear and verifiable.
+This summary provides a comprehensive analysis of the records, accounting for inconsistencies, missing data, and spelling errors.
 
 #
